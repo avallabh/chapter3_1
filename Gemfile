@@ -32,12 +32,15 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-group :development, :test do
+group :development do
   gem 'rspec-rails'
+  gem 'guard-rspec'
 end
 
 group :test do
+  gem 'rspec-rails'
   gem 'capybara'
+  gem 'spork'
 end
 
 group :production do
