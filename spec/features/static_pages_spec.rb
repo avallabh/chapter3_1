@@ -8,10 +8,16 @@ describe "Static Pages" do
       page.should have_selector('h1', text: 'Sample App')
     end
 
-    it 'should have the correct title' do
+    it 'should have the base title' do
       visit '/static_pages/home'
       page.should have_selector('title',
-        text: "#{base_title} | Home")
+        text: "#{base_title}", visible: false)
+    end
+
+    it 'should not have a custom title' do
+      visit '/static_pages/home'
+      page.should_not have_selector('title',
+        text: '| Home')
     end
   end
 
@@ -24,7 +30,7 @@ describe "Static Pages" do
     it 'should have the correct title' do
       visit '/static_pages/help'
       page.should have_selector('title',
-        text: "#{base_title} | Help")
+        text: "#{base_title} | Help", visible: false)
     end
   end
 
@@ -37,7 +43,7 @@ describe "Static Pages" do
     it 'should have the correct title' do
       visit '/static_pages/about'
       page.should have_selector('title',
-        text: "#{base_title} | About Us")
+        text: "#{base_title} | About Us", visible: false)
     end
   end
 
@@ -50,7 +56,7 @@ describe "Static Pages" do
     it 'should have the correct title' do
       visit '/static_pages/contact'
       page.should have_selector('title',
-        text: "#{base_title} | Contact")
+        text: "#{base_title} | Contact", visible: false)
     end
   end
 

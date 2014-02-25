@@ -35,6 +35,7 @@ end
 group :development do
   gem 'rspec-rails'
   gem 'guard-rspec'
+  gem 'quiet_assets'
 end
 
 group :test do

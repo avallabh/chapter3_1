@@ -1,3 +1,3 @@
 Hartl Tutorial
 
-Chapter 3, App #1
+Starting from Chapter 3
