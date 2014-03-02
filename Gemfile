@@ -48,6 +48,7 @@ group :production do
   gem 'pg', '0.12.2'
 end
 
+gem 'bootstrap-sass'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
